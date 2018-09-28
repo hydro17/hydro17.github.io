@@ -21,13 +21,13 @@
 </head>
 
 <body>
-  <!-- <nav>
+  <nav>
     <ul class="container">
-      <li id="menu-btn-1" class="menu-btn-regular menu-btn-selected">Home</li>
-      <li id="menu-btn-2" class="menu-btn-regular">Works</li>
-      <li id="menu-btn-3" class="menu-btn-regular">Contact</li>
+      <li id="menu-btn-home" class="menu-btn-regular menu-btn-selected">Home</li>
+      <li id="menu-btn-works" class="menu-btn-regular">Works</li>
+      <li id="menu-btn-contact" class="menu-btn-regular">Contact</li>
     </ul>
-  </nav> -->
+  </nav>
 
   <main class="container nav-style">
 
@@ -37,9 +37,10 @@
       <div>
         My name is Andrzej.
         <br>I am a programmer/developer.
-        <br>
-        <br>My skills:
-        <br>Object oriented programming.
+
+        <p style="margin-bottom: .5em">My skills:</p>
+
+        Object oriented programming.
         <br>Java, C#, ASP.NET, JavaScript (ES6+) / TypeScript / Angular / jQuery, HTML, CSS.
         <br>Basic knowledge of relational databases, ERD, SQL.
         <br>Basic knowledge of Unity 3D (scripts written in C#).
@@ -47,69 +48,62 @@
         <br>Knowledge of version control system GIT.
         <br>Knowledge of SOLID, Clean Code, REST.
         <br>The ability to think analytically.
-        <br>
-        <br>No commercial experience.
-        <br>
-        <br>Here are links to my GitHub and some of my works.
+
+        <p>No commercial experience.</p>
       </div>
 
+    </div>
+    <!-- home end ---------------------------->
+
+    <!-- works start ---------------------------->
+    <div id="works" class="works hide">
+
+      <h3>Here are links to my <a href="https://github.com/hydro17">GitHub</a> and some of my works.</h3>
+
+      <hr class="separator-line">
+
       <div>
-        my <a href="https://github.com/hydro17">GitHub</a>
+        My <a href="https://github.com/hydro17">GitHub</a> contains the pinned repositories of the following works:
       </div>
 
       <div class="my-works">
 
-        <div>
-          My GitHub contains the repositories (pinned) of the following works:
-        </div>
-
-        <div>
+        <figure>
           <a href="https://hydro17.github.io/fast-typing/" target="_blank">Fast Typing</a>
-          <div class="text-description">Created in vanilla JavaScript / TypeScript (I prefer static typing)</div>
-        </div>
+          <figcaption>Created in vanilla JavaScript / TypeScript (I prefer static typing)</figcaption>
+        </figure>
 
-        <div>
+        <figure>
           <a href="https://chat-f9704.firebaseapp.com/" target="_blank">Simple chat</a>
-          <div class="text-description">Created with Angular and using Firebase as a realtime database
-          </div>
-        </div>
+          <figcaption>
+            Created with Angular and using Firebase as a realtime database
+          </figcaption>
+        </figure>
 
-        <div>
+        <figure>
           <a href="https://hydro17.github.io/css-only-clock/" target="_blank">CSS only clock</a>
-          <div class="text-description">A clock created using only HTML and CSS</div>
-        </div>
+          <figcaption>
+            A clock created using only HTML and CSS
+          </figcaption>
+        </figure>
 
-        <div style="margin-top: 1em;">
+        <figure style="margin-top: 1.4em">
+          <p>The movie from the simulation in Unity 3D</p>
           <video wodth="400" height="300" src="movie_1min.mp4" controls></video>
-          <div class="text-description">The movie from the simulation in Unity 3D. <br> I have created in C# scripts controlling
-            the sailing ships during this simulation. The blue ship moves randomly and the red one is trying to sink the
-            blue one (both ships shoot to each other with cannons).
-          </div>
-        </div>
+          <figcaption>
+            <br> I have created scripts (in C#) responsible for the ships behavior. The blue ship moves randomly and the
+            red one is trying to sink the blue one (both ships shoot to each other with cannons).
+          </figcaption>
+        </figure>
 
       </div>
-
-      <div>
-        my email: <a href="mailto:andrzej.a.peplowski@gmail.com">andrzej.a.peplowski@gmail.com</a>
-      </div>
-
     </div>
-
-    <!-- home end ---------------------------->
-
-    <!-- works start ---------------------------->
-    <!-- <div id="works" class="works hide">
-
-      <figure>
-        <figcaption></figcaption>
-      </figure>
-
-    </div> -->
     <!-- works end ---------------------------->
 
     <!-- contact start ---------------------------->
-    <!-- <div id="contact" class="contact hide">
-    </div> -->
+    <div id="contact" class="contact hide">
+      My email: <a href="mailto:andrzej.a.peplowski@gmail.com">andrzej.a.peplowski@gmail.com</a>
+    </div>
     <!-- contact end ---------------------------->
 
   </main>
@@ -118,7 +112,7 @@
     &copy; Andrzej Pepłowski 2018
   </footer>
 
-  <!-- <script src="script.js"></script> -->
+  <script src="script.js"></script>
 </body>
 
 </html>

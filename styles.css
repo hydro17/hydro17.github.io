@@ -1,7 +1,6 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  /* font-size: 1.2em; */
   font-size: 1em;
   box-sizing: border-box;
   background-color: #666;
@@ -14,14 +13,16 @@ body {
   --nav-color: white;
   --nav-style-color: #ddd;
   --link-color: rgb(226, 169, 82);
-  --link-color-hover: rgb(187, 113, 1);;
+  --link-color-hover: rgb(187, 113, 1);
+  --menu-btn-width: 100px;
+  --menu-btn-width-selected: calc(var(--menu-btn-width) * 1.15);
 }
 
 main {
   box-sizing: border-box;
   padding: 20px;
   width: 80%;
-  /* margin-top: 80px; */
+  margin-top: 80px;
 }
 
 nav {
@@ -58,47 +59,41 @@ nav li:not(:last-of-type) {
 }
 
 .menu-btn-regular {
-  width: 100px;
+  width: var(--menu-btn-width);
   background-color: #222;
   border: 2px solid #222;
-  transition: all 3s;
+  transition: all 1.5s;
 }
 
 .menu-btn-regular:hover {
-  width: 150px;
+  width: var(--menu-btn-width-selected);
   border: 2px solid #aaa;
-  transition: all 1s;
+  transition: all .7s;
 }
 
 .menu-btn-selected {
-  width: 150px;
+  width: var(--menu-btn-width-selected);
   background-color: #aaa;
   border: 2px solid #222;
-  transition: all 1s;
+  transition: all .7s;
   color:black;
 }
 
-.home, .contact {
+.home, .works, .contact {
   text-align: center;
   font-size: 1.2em;
 }
 
 .home {
-  /* padding: 30px 0 130px 0; */
-  padding: 10px 0;
+  padding: 80px 0 100px 0;
 }
 
 .contact {
   padding: 180px 0 210px 0;
 }
 
-.home img {
-  margin-bottom: 10px;
-}
-
 .hide {
   display: none;
-  transition: all 2s;
 }
 
 .center {
@@ -110,29 +105,19 @@ nav li:not(:last-of-type) {
 .nav-style {
   background-color: var(--nav-background);
   color: var(--nav-style-color);
-  transition: all 2s;
+  /* transition: all 2s; */
 }
 
 .main-style {
   background-color: #aaa;
   color: black;
-  transition: background-color 2s;
+  /* transition: background-color 2s; */
 }
 
 footer {
   margin-top: 10px;
   text-align: center;
   color: var(--nav-style-color);
-}
-
-#works img {
-  width: 100%;
-  transition: all 1s;
-}
-
-img:hover {
-  transform: scale(1.015);
-  transition: all 1s;
 }
 
 a:link, a:hover, a:visited, a:active {
@@ -148,18 +133,17 @@ a:hover {
   color: var(--link-color-hover);
 }
 
-.text-description {
+figcaption {
   font-size: 0.8em;
 }
 
-#home div:not(:last-of-type) {
-  margin-bottom: 0.7em;
+.my-works {
+  width: 90%;
+  margin: auto;
 }
 
-.my-works {
-  padding: 20px;
+.separator-line {
   width: 75%;
-  margin: auto;
-  border: 1px solid white;
-  border-radius: 8px;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
