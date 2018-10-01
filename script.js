@@ -1,53 +1,44 @@
-const menuBtnHome = document.getElementById("menu-btn-home");
-const menuBtnWorks = document.getElementById("menu-btn-works");
-const menuBtnContact = document.getElementById("menu-btn-contact");
+let displayedPage = "#home";
+let activeBtn = "#menu-btn-home";
 
-const contentHome = document.getElementById("home");
-const contentWorks = document.getElementById("works");
-const contentContact = document.getElementById("contact");
+// soft transition to home page + btn "home" view change
+$("#menu-btn-home").click(() => {
+  if (displayedPage === "#home") return;
 
-const main = document.querySelector("main");
+  $(activeBtn).removeClass("menu-btn-selected");
+  $("#menu-btn-home").addClass("menu-btn-selected");
+  activeBtn = "#menu-btn-home";
 
-menuBtnHome.onclick = () => {
-  menuBtnHome.classList.add("menu-btn-selected");
-  menuBtnWorks.classList.remove("menu-btn-selected");
-  menuBtnContact.classList.remove("menu-btn-selected");
+  $(displayedPage).fadeOut(() => {
+    $("#home").fadeIn();
+    displayedPage = "#home";
+  });
+});
 
-  contentHome.classList.remove("hide");
-  contentWorks.classList.add("hide");
-  contentContact.classList.add("hide");
+// soft transition to works page + btn "works" view change
+$("#menu-btn-works").click(function () {
+  if (displayedPage === "#works") return;
 
-  // main.classList.add("nav-style");
-  // main.classList.remove("main-style");
-};
+  $(activeBtn).removeClass("menu-btn-selected");
+  $("#menu-btn-works").addClass("menu-btn-selected");
+  activeBtn = "#menu-btn-works";
 
-menuBtnWorks.onclick = () => {
-  menuBtnWorks.classList.add("menu-btn-selected");
-  menuBtnHome.classList.remove("menu-btn-selected");
-  menuBtnContact.classList.remove("menu-btn-selected");
+  $(displayedPage).fadeOut(() => {
+    $("#works").fadeIn();
+    displayedPage = "#works";
+  });
+});
 
-  contentHome.classList.add("hide");
-  contentWorks.classList.remove("hide");
-  contentContact.classList.add("hide");
+// soft transition to contact page + btn "contact" view change
+$("#menu-btn-contact").click(() => {
+  if (displayedPage === "#contact") return;
 
-  // main.classList.remove("nav-style");
-  // main.classList.add("main-style");
-};
+  $(activeBtn).removeClass("menu-btn-selected");
+  $("#menu-btn-contact").addClass("menu-btn-selected");
+  activeBtn = "#menu-btn-contact";
 
-menuBtnContact.onclick = () => {
-  menuBtnContact.classList.add("menu-btn-selected");
-  menuBtnHome.classList.remove("menu-btn-selected");
-  menuBtnWorks.classList.remove("menu-btn-selected");
-
-  contentHome.classList.add("hide");
-  contentWorks.classList.add("hide");
-  contentContact.classList.remove("hide");
-
-  // main.classList.add("main-style");
-  // main.classList.remove("nav-style");
-
-  // setTimeout(() => {
-  //   main.classList.add("nav-style");
-  //   main.classList.remove("main-style");
-  // }, 10);
-};
+  $(displayedPage).fadeOut(() => {
+    $("#contact").fadeIn();
+    displayedPage = "#contact";
+  });
+});
