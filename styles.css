@@ -151,3 +151,7 @@ figcaption {
 .my-header3 {
   font-size: 1.3em
 }
+
+.highlighted {
+  color: rgb(255, 255, 158);
+}
