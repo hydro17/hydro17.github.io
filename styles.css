@@ -155,3 +155,7 @@ figcaption {
 .highlighted {
   color: rgb(255, 255, 158);
 }
+
+/* a > span {
+  font-size: smaller;
+} */
