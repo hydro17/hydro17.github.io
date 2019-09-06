@@ -1,3 +1,8 @@
+
+/* :root {
+
+} */
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -21,40 +26,41 @@ body {
 main {
   box-sizing: border-box;
   padding: 20px;
-  width: 80%;
-  margin-top: 80px;
 }
+
+main.main-margin-top {
+  margin-top: 80px;
+} 
 
 nav {
   position: fixed;
   padding: 15px 0;
   background-color: var(--nav-background);
   color: var(--nav-color);
-  left: 0px;
-  top: 0px;
-  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
 }
 
-nav>ul {
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.menu {
   display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  --container-width: 80;
-  width: calc(var(--container-width)*1%);
-  margin-left: calc(((100 - var(--container-width))/2)*1%);
-}
-
-nav li {
+.menu li {
   padding: 5px 0;
   text-align: center;
   cursor: pointer;
 }
 
-nav li:not(:last-of-type) {
+.menu li:not(:last-of-type) {
   margin-right:20px;
 }
 
@@ -84,12 +90,20 @@ nav li:not(:last-of-type) {
   font-size: 1.2em;
 }
 
+div.home, div.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .home {
-  padding: 80px 0 100px 0;
+  min-height: 380px;
+  height: 50vh;
 }
 
 .contact {
-  padding: 180px 0 210px 0;
+  min-height: 50px;
+  height: 50vh;
 }
 
 .hide {
@@ -115,9 +129,12 @@ nav li:not(:last-of-type) {
 }
 
 footer {
-  margin-top: 10px;
   text-align: center;
   color: var(--nav-style-color);
+}
+
+footer.footer-margin-top {
+  margin-top: .5em;
 }
 
 a:link, a:hover, a:visited, a:active {
