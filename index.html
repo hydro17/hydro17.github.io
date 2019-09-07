@@ -31,8 +31,8 @@
 
   <main class="container nav-style main-margin-top">
 
-    <!-- home start ------------------------------>
-    <div id="home" class="home">
+    <!-- START HOME ------------------------------>
+    <section id="home">
 
       <div class="my-header3">
         My name is Andrzej.
@@ -40,7 +40,7 @@
       </div>
 
       <div>
-        <p style="margin-bottom: .5em">My skills:</p>
+        <p class="mb-2">My skills:</p>
 
         Object oriented programming.
         <br>Java / Spring / Hibernate
@@ -54,15 +54,18 @@
         <br>The ability to think analytically.
       </div>
 
-    </div>
-    <!-- home end ------------------------------->
+    </section>
+    <!-- END HOME ------------------------------->
 
-    <!-- works start ---------------------------->
-    <div id="works" class="works hide">
+    <!-- START WORKS ---------------------------->
+    <!-- {style="display: none"} <- This is just the initial setting for sections at the beginning that should be hidden -->
+    <!-- Later this inline style {style="display: none"} is controlled by jQuery functions: fadeOut(), fadeIn() -->
+    <!-- Functions fadeOut() and fadeIn() the end of the animation leave display: none and display: block -->
+    <section id="works" style="display: none">
 
-      <div class="my-header3" style="margin-top: 15px">Here are links to my <a
-          href="https://github.com/hydro17">GitHub</a>
-        and some of my works.</div>
+      <div class="my-header3 mt-3">
+        Here are links to my <a href="https://github.com/hydro17">GitHub</a> and some of my works.
+      </div>
 
       <hr class="separator-line">
 
@@ -124,7 +127,7 @@
           </figcaption>
         </figure>
 
-        <figure style="margin-top: 1.4em">
+        <figure class="mt-4">
           <a href="http://ebookcase-core-mvc.gear.host/" target="_blank">eBookcase / MVC</a>
           <figcaption>
             (C# / ASP.NET Core MVC / Entity Framework / SQL Server / Bootstrap 4)
@@ -132,7 +135,7 @@
           </figcaption>
         </figure>
 
-        <figure style="margin-top: 1.4em">
+        <figure class="mt-4">
           <a href="http://ebookcase-core-rp.gear.host/BookList" target="_blank">eBookcase / Razor Pages</a>
           <figcaption>
             (C# / ASP.NET Core Razor Pages / Entity Framework / SQL Server / Bootstrap 4)
@@ -165,18 +168,25 @@
         </figure>
 
       </div>
-    </div>
-    <!-- works end ------------------------------->
+    </section>
+    <!-- END WORKS ------------------------------->
 
-    <!-- contact start --------------------------->
-    <div id="contact" class="contact my-header3 hide">
-      My email: <a href="mailto:andrzej.a.peplowski@gmail.com">andrzej.a.peplowski@gmail.com</a>
-    </div>
-    <!-- contact end ----------------------------->
+    <!-- START CONTACT --------------------------->
+    <!-- {style="display: none"} <- This is just the initial setting for sections at the beginning that should be hidden -->
+    <!-- Later this inline style {style="display: none"} is controlled by jQuery functions: fadeOut(), fadeIn() -->
+    <!-- Functions fadeOut() and fadeIn() the end of the animation leave display: none and display: block -->
+    <section id="contact" style="display: none">
+
+      <div class="my-header3">
+        My email: <a href="mailto:andrzej.a.peplowski@gmail.com">andrzej.a.peplowski@gmail.com</a>
+      </div>
+
+    </section>
+    <!-- END CONTACT ----------------------------->
 
   </main>
 
-  <footer class="container footer-margin-top">
+  <footer class="container mt-3">
     &copy; Andrzej Pepłowski 2018
   </footer>
 

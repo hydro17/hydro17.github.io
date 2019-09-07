@@ -1,15 +1,10 @@
 
-/* :root {
-
-} */
-
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   font-size: 1em;
   box-sizing: border-box;
   background-color: #666;
-  /* background-image: url("img/images.jpg"); */
   background-size: 2%;
 }
 
@@ -85,29 +80,25 @@ nav {
   color:black;
 }
 
-.home, .works, .contact {
+#home, #works, #contact {
   text-align: center;
   font-size: 1.2em;
 }
 
-div.home, div.contact {
+#home, #contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.home {
+#home {
   min-height: 380px;
   height: 50vh;
 }
 
-.contact {
+#contact {
   min-height: 50px;
   height: 50vh;
-}
-
-.hide {
-  display: none;
 }
 
 .center {
@@ -131,10 +122,6 @@ div.home, div.contact {
 footer {
   text-align: center;
   color: var(--nav-style-color);
-}
-
-footer.footer-margin-top {
-  margin-top: .5em;
 }
 
 a:link, a:hover, a:visited, a:active {
@@ -173,6 +160,38 @@ figcaption {
   color: rgb(255, 255, 158);
 }
 
-/* a > span {
-  font-size: smaller;
-} */
+/* Utility classes - start */
+
+.mt-1 {
+  margin-top: .25rem;
+}
+
+.mt-2 {
+  margin-top: .5rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.mb-1 {
+  margin-bottom: .25rem;
+}
+
+.mb-2 {
+  margin-bottom: .5rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+/* Utility classes - end */

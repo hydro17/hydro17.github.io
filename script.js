@@ -16,7 +16,7 @@ $("#menu-btn-home").click(() => {
 });
 
 // soft transition to works page + btn "works" view change
-$("#menu-btn-works").click(function () {
+$("#menu-btn-works").click(() => {
   if (displayedPage === "#works") return;
 
   $(activeBtn).removeClass("menu-btn-selected");
