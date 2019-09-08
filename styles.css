@@ -244,3 +244,9 @@ figcaption {
     width: 90%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .app-features {
+    width: 100%;
+  }
+}
