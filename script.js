@@ -10,6 +10,7 @@ $("#menu-btn-home").click(() => {
   activeBtn = "#menu-btn-home";
 
   $(displayedPage).fadeOut(() => {
+    window.scrollTo(0, 0);
     $("#home").fadeIn();
     displayedPage = "#home";
   });
@@ -24,6 +25,7 @@ $("#menu-btn-works").click(() => {
   activeBtn = "#menu-btn-works";
 
   $(displayedPage).fadeOut(() => {
+    window.scrollTo(0, 0);
     $("#works").fadeIn();
     displayedPage = "#works";
   });
@@ -38,6 +40,7 @@ $("#menu-btn-contact").click(() => {
   activeBtn = "#menu-btn-contact";
 
   $(displayedPage).fadeOut(() => {
+    window.scrollTo(0, 0);
     $("#contact").fadeIn();
     displayedPage = "#contact";
   });
