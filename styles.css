@@ -14,13 +14,11 @@
 }
 
 body {
-  height: 100vh;
   margin: 0;
   font-family: 'Lato', sans-serif;
   font-size: 1em;
   box-sizing: border-box;
   background-color: #666;
-  background-size: 2%;
 }
 
 p {
@@ -182,6 +180,7 @@ figcaption {
 .app-features ul {
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 30px;
 }
 
 .warning-30s {
