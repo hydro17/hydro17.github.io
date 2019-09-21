@@ -27,6 +27,7 @@ p {
 
 main {
   padding: 20px;
+  overflow: hidden;
 }
 
 main.main-margin-top {
@@ -188,6 +189,15 @@ figcaption {
   background: #555;
   padding: .4em .6em;
   font-size: .95em;
+}
+
+.animate-height {
+  animation: animate-height 0.5s ease-in-out;
+}
+
+@keyframes animate-height {
+  0% {height: var(--main-initial-height)}
+  100% {height: var(--main-target-height)}
 }
 
 /* Utility classes - start */

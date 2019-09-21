@@ -1,47 +1,44 @@
 let displayedPage = "#home";
 let activeBtn = "#menu-btn-home";
 
-// soft transition to home page + btn "home" view change
+const root = document.documentElement;
+const main = document.querySelector("main");
+
+// soft transition to new View + change to new menu button appearance
+function changeView(newMenuBtn, newView) {
+  $(activeBtn).removeClass("menu-btn-selected");
+  $(newMenuBtn).addClass("menu-btn-selected");
+  activeBtn = newMenuBtn;
+
+  const mainInitialHeight = main.offsetHeight + "px";
+  root.style.setProperty("--main-initial-height", mainInitialHeight);
+
+  $(displayedPage).fadeOut(() => {
+    window.scrollTo(0, 0);
+    main.style.visibility = "hidden";
+    main.classList.remove("animate-height");
+
+    $(newView).fadeIn();
+
+    root.style.setProperty("--main-target-height", main.offsetHeight + "px");
+    main.classList.add("animate-height");
+    main.style.visibility = "visible";
+
+    displayedPage = newView;
+  });
+}
+
 $("#menu-btn-home").click(() => {
   if (displayedPage === "#home") return;
-
-  $(activeBtn).removeClass("menu-btn-selected");
-  $("#menu-btn-home").addClass("menu-btn-selected");
-  activeBtn = "#menu-btn-home";
-
-  $(displayedPage).fadeOut(() => {
-    window.scrollTo(0, 0);
-    $("#home").fadeIn();
-    displayedPage = "#home";
-  });
+  changeView("#menu-btn-home", "#home");
 });
 
-// soft transition to works page + btn "works" view change
 $("#menu-btn-works").click(() => {
   if (displayedPage === "#works") return;
-
-  $(activeBtn).removeClass("menu-btn-selected");
-  $("#menu-btn-works").addClass("menu-btn-selected");
-  activeBtn = "#menu-btn-works";
-
-  $(displayedPage).fadeOut(() => {
-    window.scrollTo(0, 0);
-    $("#works").fadeIn();
-    displayedPage = "#works";
-  });
+  changeView("#menu-btn-works", "#works");
 });
 
-// soft transition to contact page + btn "contact" view change
 $("#menu-btn-contact").click(() => {
   if (displayedPage === "#contact") return;
-
-  $(activeBtn).removeClass("menu-btn-selected");
-  $("#menu-btn-contact").addClass("menu-btn-selected");
-  activeBtn = "#menu-btn-contact";
-
-  $(displayedPage).fadeOut(() => {
-    window.scrollTo(0, 0);
-    $("#contact").fadeIn();
-    displayedPage = "#contact";
-  });
+  changeView("#menu-btn-contact", "#contact");
 });
