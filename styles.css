@@ -184,6 +184,13 @@ figcaption {
   margin-bottom: 0;
 }
 
+.warning-30s {
+  display: inline-block;
+  background: #555;
+  padding: .4em .6em;
+  font-size: .95em;
+}
+
 /* Utility classes - start */
 
 .mt-1 {
