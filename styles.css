@@ -25,12 +25,17 @@ p {
   margin: .5em 0;
 }
 
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 main {
   padding: 20px;
   overflow: hidden;
 }
 
-main.main-margin-top {
+.main-margin-top {
   margin-top: 90px;
 } 
 
@@ -48,7 +53,8 @@ nav {
 
 .container {
   width: 80%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu {
@@ -97,7 +103,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
 }
 
 #home {
@@ -179,8 +185,6 @@ figcaption {
 }
 
 .app-features ul {
-  margin-top: 0;
-  margin-bottom: 0;
   padding-left: 30px;
 }
 
@@ -262,7 +266,19 @@ figcaption {
 }
 
 @media screen and (max-width: 500px) {
+  .main-margin-top {
+    margin-top: 77px;
+  } 
+
   .app-features {
     width: 100%;
+  }
+
+  #home, #contact {
+    font-size: 1rem;
+  }
+
+  #works .my-header3 {
+    font-size: 1.1em
   }
 }
