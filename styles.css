@@ -90,7 +90,7 @@ nav {
 
 #home, #works, #contact {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 #home, #contact {
@@ -196,8 +196,8 @@ figcaption {
 }
 
 @keyframes animate-height {
-  0% {height: var(--main-initial-height)}
-  100% {height: var(--main-target-height)}
+  0% {height: var(--views-container-initial-height)}
+  100% {height: var(--views-container-target-height)}
 }
 
 /* Utility classes - start */

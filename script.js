@@ -1,44 +1,49 @@
-let displayedPage = "#home";
-let activeBtn = "#menu-btn-home";
+let currentView = "#home";
+let activeMenuBtn = "#menu-btn-home";
 
 const root = document.documentElement;
-const main = document.querySelector("main");
+const viewsContainer = document.querySelector("main");
 
 // soft transition to new View + change to new menu button appearance
+// viewsContainer height animation (using css)
 function changeView(newMenuBtn, newView) {
-  $(activeBtn).removeClass("menu-btn-selected");
+  $(activeMenuBtn).removeClass("menu-btn-selected");
   $(newMenuBtn).addClass("menu-btn-selected");
-  activeBtn = newMenuBtn;
+  activeMenuBtn = newMenuBtn;
 
-  const mainInitialHeight = main.offsetHeight + "px";
-  root.style.setProperty("--main-initial-height", mainInitialHeight);
+  const mainInitialHeight = viewsContainer.offsetHeight + "px";
+  root.style.setProperty("--views-container-initial-height", mainInitialHeight);
 
-  $(displayedPage).fadeOut(() => {
+  $(currentView).fadeOut(() => {
     window.scrollTo(0, 0);
-    main.style.visibility = "hidden";
-    main.classList.remove("animate-height");
+    viewsContainer.style.visibility = "hidden";
+
+    // to be able to repeat the css animation
+    viewsContainer.classList.remove("animate-height");
 
     $(newView).fadeIn();
 
-    root.style.setProperty("--main-target-height", main.offsetHeight + "px");
-    main.classList.add("animate-height");
-    main.style.visibility = "visible";
+    root.style.setProperty("--views-container-target-height", viewsContainer.offsetHeight + "px");
 
-    displayedPage = newView;
+    // start css animation
+    viewsContainer.classList.add("animate-height");
+    viewsContainer.style.visibility = "visible";
+
+    currentView = newView;
   });
 }
 
 $("#menu-btn-home").click(() => {
-  if (displayedPage === "#home") return;
+  if (currentView === "#home") return;
   changeView("#menu-btn-home", "#home");
 });
 
 $("#menu-btn-works").click(() => {
-  if (displayedPage === "#works") return;
+  if (currentView === "#works") return;
   changeView("#menu-btn-works", "#works");
 });
 
 $("#menu-btn-contact").click(() => {
-  if (displayedPage === "#contact") return;
+  if (currentView === "#contact") return;
   changeView("#menu-btn-contact", "#contact");
 });
