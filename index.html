@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet">
   <title>Examples of my work</title>
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -43,13 +46,13 @@
         <p class="mb-2">My skills:</p>
 
         Object oriented programming.
+        <br>C# / ASP.NET Core / MVC / Razor Pages / Entity Framework Core
         <br>Java / Spring / Hibernate
-        <br>C# / .NET / MVC / Razor Pages / Entity Framework
         <br>JavaScript (ES6+) / TypeScript / Angular / jQuery, HTML, CSS.
+        <br>Version control system GIT + <a href="https://github.com/hydro17/">gitHub</a>.
         <br>Knowledge of relational databases, ERD, SQL.
-        <br>Basic knowledge of Unity 3D (scripts written in C#).
-        <br>Academic knowlegde of UML.
-        <br>Knowledge of version control system GIT.
+        <br>Basic knowledge of Unity 3D (scripts in C#).
+        <br>Basic knowlegde of UML.
         <br>Knowledge of SOLID, Clean Code, REST.
         <br>The ability to think analytically.
       </div>
@@ -60,7 +63,7 @@
     <!-- START WORKS ---------------------------->
     <!-- {style="display: none"} <- This is just the initial setting for sections at the beginning that should be hidden -->
     <!-- Later this inline style {style="display: none"} is controlled by jQuery functions: fadeOut(), fadeIn() -->
-    <!-- Functions fadeOut() and fadeIn() the end of the animation leave display: none and display: block -->
+    <!-- Functions fadeOut() and fadeIn() at the end of the animation leave display: none or display: block respectively -->
     <section id="works" style="display: none">
 
       <div class="my-header3 mt-3">
@@ -76,9 +79,10 @@
       <div class="my-works">
 
         <figure>
-          <a href="https://pacific-scrubland-22758.herokuapp.com" target="_blank">Pizza service</a>
+          <a href="https://pacific-scrubland-22758.herokuapp.com" target="_blank">Pizza service (web MVC
+            application)</a>
           <figcaption>
-            (Java / Spring / Hibernate / MySQL/PostgreSQL / Thymeleaf /Bootstrap&nbsp;4&nbsp;(some elements)
+            (Java / Spring / Hibernate / MySQL/PostgreSQL / Thymeleaf / Bootstrap&nbsp;4&nbsp;(some elements)
             /<br>Authentication
             and role-based authorization)
 
@@ -88,12 +92,24 @@
             </div>
 
             <div class="app-features">
-              <h4 class="mb-2 mt-2">Application allows to: </h4>
+              <div>
+                <h4 class="mb-2 mt-3">You need to log in:
+                </h4>
+                <ul>
+                  <li>as a client - e-mail: peter123@customer.com, pass: peter123</li>
+                  <li>as a cook - e-mail: peter123@cook.com, pass: peter123</li>
+                  <li>as an employee - e-mail: peter123@employee.com, pass: peter123</li>
+                  <li>as an admin - e-mail: peter123@admin.com, pass: peter123</li>
+                  <li>you can create your account (with fake e-mail)</li>
+                </ul>
+              </div>
+
+              <h4 class="mb-2 mt-3">Application allows to: </h4>
 
               <ul>
-                <li>As not logged in user:
+                <li>As not logged in customer:
                   <ul>
-                    <li>to log in,</li>
+                    <li>to log in as customer or admin or cook or employee</li>
                     <li>to register as new user.</li>
                   </ul>
                 </li>
@@ -128,11 +144,35 @@
         <figure>
           <a href="http://www.cza.pl/" target="_blank">Website of the magazine "Czasopismo Aptekarskie" (SPA)</a>
           <figcaption>
-            Responsive / mobile first website developed with Angular.
+            (HTML / CSS / Angular 8)
+            <br>Responsive / mobile first website developed with Angular 8.
           </figcaption>
         </figure>
 
         <figure>
+          <a href="http://hydro17-001-site1.htempurl.com/" target="_blank">Bookshop (web MVC application)</a>
+          <figcaption>
+            (C# / ASP.NET Core / MVC / Entity Framework Core / SQL Server / Bootstrap 4)
+
+            <div class="app-features">
+              <h4 class="mb-2 mt-2">Application allows to: </h4>
+              <ul>
+                <li>add new book (with title, author, unit price, description (optional) and cover (optional))</li>
+                <li>check details of a book</li>
+                <li>edit details of a book</li>
+                <li>delete a book (can't be a part of an order and can't be in a shopping cart)</li>
+                <li>add books to shopping cart</li>
+                <li>edit content of shopping cart (add and remove books)</li>
+                <li>submit the content of the shopping cart as an order</li>
+                <li>check details of an order</li>
+                <li>delete an order</li>
+              </ul>
+            </div>
+
+          </figcaption>
+        </figure>
+
+        <!-- <figure>
           <a href="http://ebookcase-core-mvc.gear.host/" target="_blank">eBookcase / MVC</a>
           <figcaption>
             (C# / ASP.NET Core MVC / Entity Framework / SQL Server / Bootstrap 4)
@@ -146,7 +186,7 @@
             (C# / ASP.NET Core Razor Pages / Entity Framework / SQL Server / Bootstrap 4)
             <br>Simple application (the same as above) (developed using Razor Pages) performing CRUD operations.
           </figcaption>
-        </figure>
+        </figure> -->
 
         <figure>
           <div><span class="highlighted">Example of using C#</span> - A short video from a simulation in Unity 3D</div>
@@ -158,16 +198,18 @@
         </figure>
 
         <figure>
-          <a href="https://chat-f9704.firebaseapp.com/" target="_blank">Simple chat (Angular / Firebase)</a>
+          <a href="https://chat-f9704.firebaseapp.com/" target="_blank">Simple chat (HTML / CSS / Angular 8 /
+            Firebase)</a>
           <figcaption>
-            Developed using Angular and Firebase as a realtime database.
+            Developed using Angular 8 and Firebase as a realtime database.
           </figcaption>
         </figure>
 
         <figure>
-          <a href="https://hydro17.github.io/fast-typing/" target="_blank">Fast Typing (JavaScript)</a>
+          <a href="https://hydro17.github.io/fast-typing/" target="_blank">Fast Typing (HTML / CSS / JavaScript /
+            TypeScript)</a>
           <figcaption>
-            Developed in vanilla JavaScript / TypeScript (I prefer static typing).
+            Developed using vanilla JavaScript / TypeScript (I prefer static typing).
           </figcaption>
         </figure>
 
@@ -178,7 +220,7 @@
     <!-- START CONTACT --------------------------->
     <!-- {style="display: none"} <- This is just the initial setting for sections at the beginning that should be hidden -->
     <!-- Later this inline style {style="display: none"} is controlled by jQuery functions: fadeOut(), fadeIn() -->
-    <!-- Functions fadeOut() and fadeIn() the end of the animation leave display: none and display: block -->
+    <!-- Functions fadeOut() and fadeIn() at the end of the animation leave display: none or display: block respectively -->
     <section id="contact" style="display: none">
 
       <div class="my-header3">
@@ -193,9 +235,6 @@
   <footer class="container mt-3">
     &copy; Andrzej Pepłowski 2018
   </footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="script.js"></script>
 </body>
 
 </html>
