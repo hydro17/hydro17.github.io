@@ -191,6 +191,7 @@ figcaption {
 .warning-30s {
   display: inline-block;
   background: #555;
+  border: 1px solid #999;
   padding: .4em .6em;
   font-size: .95em;
 }
