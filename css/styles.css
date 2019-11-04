@@ -209,6 +209,13 @@ figcaption {
   transform: scale(1.1);
 }
 
+.github {
+  /* position: relative;
+  top: -1px; */
+  font-size: 0.5em;
+  /* padding: .15em .3em; */
+  /* border: 1px solid #aaa; */
+}
 
 @keyframes animate-height {
   0% {height: var(--views-container-initial-height)}
