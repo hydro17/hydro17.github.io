@@ -1,5 +1,5 @@
-let currentView = "#home";
-let activeMenuBtn = "#menu-btn-home";
+let currentView = "#works";
+let activeMenuBtn = "#menu-btn-works";
 
 const root = document.documentElement;
 const viewsContainer = document.querySelector("main");
